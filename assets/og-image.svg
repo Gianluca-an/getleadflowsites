@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="630" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0b1020"/><stop offset="1" stop-color="#070a14"/>
+    </linearGradient>
+    <linearGradient id="g" x1="0" y1="630" x2="1200" y2="0" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#3b82f6"/><stop offset="1" stop-color="#06d6e8"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.85" cy="0.1" r="0.6">
+      <stop stop-color="#3b82f6" stop-opacity="0.35"/><stop offset="1" stop-color="#3b82f6" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect width="1200" height="630" fill="url(#glow)"/>
+
+  <!-- logo mark -->
+  <g transform="translate(96,86)">
+    <rect x="1" y="1" width="70" height="70" rx="20" fill="url(#g)" opacity="0.16"/>
+    <rect x="1" y="1" width="70" height="70" rx="20" stroke="url(#g)" stroke-width="2.5"/>
+    <path d="M16 50 L31 35 L42 44 L57 24" stroke="url(#g)" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M57 24 L57 36 M57 24 L45 24" stroke="url(#g)" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="16" cy="50" r="4.5" fill="#06d6e8"/>
+  </g>
+  <text x="188" y="133" font-family="'Space Grotesk',Arial,sans-serif" font-size="34" font-weight="700" fill="#eaf0ff">GetLeadFlow</text>
+
+  <!-- headline -->
+  <text x="96" y="300" font-family="'Space Grotesk',Arial,sans-serif" font-size="72" font-weight="700" fill="#eaf0ff" letter-spacing="-2">Booked ceramic coating &amp;</text>
+  <text x="96" y="382" font-family="'Space Grotesk',Arial,sans-serif" font-size="72" font-weight="700" letter-spacing="-2"><tspan fill="#eaf0ff">PPF jobs — </tspan><tspan fill="url(#g)">on autopilot.</tspan></text>
+
+  <text x="96" y="452" font-family="Arial,sans-serif" font-size="30" fill="#9aa6c4">We run the ads, work every lead, and book jobs on your calendar.</text>
+
+  <!-- guarantee pill -->
+  <rect x="96" y="502" width="470" height="60" rx="30" fill="url(#g)"/>
+  <text x="331" y="540" font-family="'Space Grotesk',Arial,sans-serif" font-size="26" font-weight="700" fill="#04121f" text-anchor="middle">7–12 guaranteed jobs in 30–60 days</text>
+
+  <text x="1104" y="592" font-family="Arial,sans-serif" font-size="24" fill="#6b7699" text-anchor="end">getleadflowsites.com</text>
+</svg>
