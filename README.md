@@ -9,37 +9,46 @@ jobs onto the detailer's calendar.
 Plain, self-contained **HTML / CSS / JS** — no build step, no framework, hosts
 anywhere. Fast, easy to edit, and portable.
 
+The published website lives in **`public/`** — only that folder is deployed, so
+`research/` and other repo files are never exposed on the live site.
+
 ```
-index.html          Home
-services.html       Services (incl. lead follow-up & appointment setting)
-how-it-works.html   4-step process
-about.html          About + founder
-contact.html        Book-a-call + qualifying form
-css/styles.css      Shared design system (tokens, components, responsive)
-js/main.js          Nav, sticky header, FAQ accordion, scroll reveal, form
-assets/             Logo mark, favicon, Open Graph social image (SVG)
-sitemap.xml         SEO sitemap
-robots.txt          Crawl directives
-CNAME               Custom domain for GitHub Pages (getleadflowsites.com)
-research/           Competitive teardown of the detailing-marketing market
+public/                     ← the deployed site (publish/output directory)
+  index.html                Home
+  services.html             Services (incl. lead follow-up & appointment setting)
+  how-it-works.html         4-step process
+  about.html                About + founder
+  contact.html              Book-a-call + qualifying form
+  css/styles.css            Shared design system (tokens, components, responsive)
+  js/main.js                Nav, sticky header, FAQ accordion, scroll reveal, form
+  assets/                   Logo mark, favicon, Open Graph social image (SVG)
+  sitemap.xml               SEO sitemap
+  robots.txt                Crawl directives
+  CNAME                     Custom domain hint (getleadflowsites.com) — used by GitHub Pages
+wrangler.jsonc              Cloudflare deploy config (serves ./public as a static site)
+research/                   Competitive teardown — private, NOT deployed
+README.md
 ```
 
 ## Run locally
 
-Just open `index.html` in a browser, or serve the folder:
+Serve the `public/` folder:
 
 ```bash
-python3 -m http.server 8000   # then visit http://localhost:8000
+cd public && python3 -m http.server 8000   # then visit http://localhost:8000
 ```
 
 ## Deploy
 
-Any static host works — pick one:
+No build step. Whatever host you use, the **publish / output directory is `public`**.
 
-- **GitHub Pages:** enable Pages on this branch; the included `CNAME` points it at
-  `getleadflowsites.com`. Add the DNS records GitHub shows you.
-- **Netlify / Vercel / Cloudflare Pages:** drag-and-drop the folder or connect the
-  repo. No build command; publish directory is the repo root.
+- **Cloudflare (current):** connected to this repo via `wrangler.jsonc`, which serves
+  `./public` as a static (assets-only) site. Deploy command: `npx wrangler deploy`.
+- **Cloudflare Pages:** connect the repo; set **Build output directory** to `public`,
+  no build command.
+- **Netlify / Vercel:** connect the repo; publish directory `public`, no build command.
+- **GitHub Pages:** publish from `/public` (Pages "folder" option) — requires the repo
+  to be public. The `CNAME` in `public/` points it at `getleadflowsites.com`.
 
 ## Things to customize
 

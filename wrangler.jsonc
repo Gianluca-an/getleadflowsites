@@ -1,0 +1,10 @@
+{
+  // Cloudflare deploy config — static site served from ./public
+  // (an assets-only Worker; no server code). Only files under ./public are
+  // published, so research/ and other repo files stay private.
+  "name": "getleadflowsites",
+  "compatibility_date": "2025-06-01",
+  "assets": {
+    "directory": "./public"
+  }
+}
