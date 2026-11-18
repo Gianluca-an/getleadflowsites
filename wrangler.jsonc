@@ -5,6 +5,9 @@
   "name": "getleadflowsites",
   "compatibility_date": "2025-06-01",
   "assets": {
-    "directory": "./public"
+    "directory": "./public",
+    // While the site is "coming soon", serve index.html for any unmatched
+    // path so every URL on the domain shows the placeholder (not a 404).
+    "not_found_handling": "single-page-application"
   }
 }
